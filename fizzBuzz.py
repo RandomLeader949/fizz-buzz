@@ -3,7 +3,11 @@ maxNum = int(input("What should the highest number be? "))
 #desides the highest number to go up to based on the user input
 for i in range(maxNum+1):
     #detcts if the number is divisible by 3 and prints based on it
-    if i % 3 == 0:
+    if i % 3 == 0 and i % 5 != 0:
+        print("fizz")
+    elif i % 5 == 0 and i % 3 != 0:
+        print("buzz")
+    elif i % 5 == 0 and i % 3 == 0:
         print("Fizzbuzz")
     else:
         print(i)
